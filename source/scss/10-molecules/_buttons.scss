@@ -3,7 +3,6 @@
 
 $button-font: $font-primary;
 
-
 // Basic button style, allowing you to select the colors
 @mixin button($main-color, $secondary-color: #fff, $transparent: true ) {
 	border: 2px solid $main-color;
@@ -152,4 +151,8 @@ input[type=submit],
 
 .button--red {
 	@include button($color-red);
+}
+
+.button--black {
+	@include button(white, black);
 }
