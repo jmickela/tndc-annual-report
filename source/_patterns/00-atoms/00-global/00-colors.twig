@@ -1,0 +1,15 @@
+{# 
+
+Required Data:
+color_name - scss variable name
+color_code - hex, rgb, etc
+
+
+#}
+
+{% if color_name and color_code %}
+	<li>
+		<span class="sg-swatch" style="background: {{ color_code }};"></span>
+		<span class="sg-label">{{ color_name }}: {{ color_code }}</span>
+	</li>
+{% endif %}
