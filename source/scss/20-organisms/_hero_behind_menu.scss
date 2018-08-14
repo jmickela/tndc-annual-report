@@ -22,10 +22,13 @@
   }
 
   .navbar--primary {
-    @include rem('margin-top', 68px);
 
-    display: flex;
-    align-content: center;
-    justify-content: flex-end;
+    @media (min-width: 768px) {
+      @include rem('margin-top', 73px);
+      @include rem('margin-left', 36px);
+    }
+
+
+
   }
 }

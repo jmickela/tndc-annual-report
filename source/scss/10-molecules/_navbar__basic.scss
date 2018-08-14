@@ -10,12 +10,20 @@
 
   .menu-item > a {
     @include rem('font-size', 16px);
+    @include rem('letter-spacing', 0.25px);
+    @include rem('padding', 10px 8px);
+
+    font-weight: bold;
     color: #333333;
     text-transform: uppercase;
 
     &:hover {
       background: none;
       opacity: 0.9;
+    }
+
+    @media (min-width: 1250px) {
+      @include rem('padding', 10px 32px);
     }
   }
 }

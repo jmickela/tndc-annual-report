@@ -5,11 +5,48 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
+  font-family: $font-primary;
 }
 
 body {
+  font-family: $font-primary;
   position: relative;
   overflow-x: hidden;
   @include rem('letter-spacing', 0.5px);
-  @include rem('font-size', 14px);
+  @include rem('font-size', 16px);
+  color: white;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  @include rem('font-size', 90px);
+  //@include rem('letter-spacing', 1.3px);
+  @include rem('letter-spacing', -0.8px);
+  color: white;
+  line-height: 1.44;
+  text-align: center;
+}
+
+h2 {
+  @include rem('font-size', 36px);
+  @include rem('letter-spacing', 0.5px);
+  color: white;
+  line-height: 1.33;
+}
+
+h3 {
+  @include rem('font-size', 30px);
+  @include rem('letter-spacing', 0.5px);
+  color: white;
+}
+
+h4 {
+  @include rem('font-size', 24px);
+  @include rem('letter-spacing', 0.5px);
+  color: white;
+  line-height: 1.25;
 }
