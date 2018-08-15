@@ -1,4 +1,4 @@
-<div class='donorlist'>
+<section class='donorlist'>
   <h2 class="donorlist__title">{{ __('Thank You') }}</h2>
   {#<p class="donorlist__description">#}
     {#{{ __('Thank your for being the cornerstone of our work!') }}#}
@@ -13,4 +13,18 @@
       <i class="fas fa-search" title="{{ __('Submit Search') }}"></i>
     </button>
   </form>
+
+  <div class='donorlist__individual'>
+    <div class='donorlist__rangeselect'>
+      SOME KIND OF WIDGET
+    </div>
+
+    <div class='donorlist__individual__cols__wrapper'>
+      <ul>
+        {% for _ in range(0, 500) %}
+          <li>{{ faker('words', 3)|join(' ') }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
