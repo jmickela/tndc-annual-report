@@ -1,0 +1,55 @@
+@import "../variables";
+@import "../mixins";
+
+.donorlist {
+  @include rem('padding-top', 40px);
+  background-color: $color-bluish;
+}
+
+.donorlist__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.donorlist__description {
+  text-align: center;
+}
+
+.donorlist__searchform {
+  @include rem('height', 40px);
+  @include rem('width', 270px);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.donorlist__searchform__input {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  background-color: rgba(244, 244, 246, 0.74);
+  height: 100%;
+  font-size: 14px;
+  @include rem('padding-left', 16px);
+  color: #333;
+
+  &::placeholder {
+    line-height: 1.14;
+    letter-spacing: 0.5px;
+    color: rgba(171, 171, 182, 0.74);
+  }
+
+}
+
+.donorsearch__searchform__submit {
+  @include rem('padding', 0 14px);
+  background-color: #444444;
+  position: absolute;
+  color: white;
+  right: 0;
+  top: 0;
+  border: 0;
+  margin: 0;
+  height: 100%;
+}

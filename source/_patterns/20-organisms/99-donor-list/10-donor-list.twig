@@ -1,0 +1,16 @@
+<div class='donorlist'>
+  <h2 class="donorlist__title">{{ __('Thank You') }}</h2>
+  {#<p class="donorlist__description">#}
+    {#{{ __('Thank your for being the cornerstone of our work!') }}#}
+  {#</p>#}
+  <form class="donorlist__searchform">
+    <label for="donorsearch" class="sr-only">{{ __('Search for Donors') }}</label>
+    <input type="text"
+           name="donorsearch"
+           class="donorlist__searchform__input"
+           placeholder="{{ __('Search...') }}" />
+    <button class="donorsearch__searchform__submit" type="button">
+      <i class="fas fa-search" title="{{ __('Submit Search') }}"></i>
+    </button>
+  </form>
+</div>
