@@ -1,0 +1,107 @@
+@import "../variables";
+@import "../mixins";
+
+.demographics__content {
+  background-color: rgba($color-dark-sea-green, 0.85);
+  max-width: 765px;
+}
+
+.demographics__title {
+  margin: 0;
+  padding: 0;
+}
+
+.demographics__graph__wrapper {
+  border-bottom: 4px solid #323232;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  max-width: 530px;
+  min-height: 295px;
+}
+
+.demographics__graph__barchart {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.demographics__graph__bar {
+  border: 4px solid #323232;
+  border-bottom: 0;
+  width: 119px;
+
+  transition: height 1600ms ease;
+  transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+}
+
+.demographics__graph__label {
+  @include rem('font-size', 13px);
+  line-height: 1.2;
+  position: absolute;
+  top: 51px;
+  left: 18px;
+  z-index: 10;
+  max-width: 80px;
+
+  .bold {
+    @include rem('font-size', 20px);
+    font-weight: bold;
+  }
+}
+
+.demographics__graph__line {
+  width: 3.3px;
+  background-color: white;
+  position: absolute;
+  left: 18px;
+}
+
+.demographics__graph__barchart--one {
+  .demographics__graph__line {
+    bottom: 16px;
+    top: 115px;
+  }
+
+  .demographics__graph__bar {
+    height: 8px;
+    background-color: #f3bd3b;
+  }
+}
+
+.demographics__graph__barchart--two {
+  .demographics__graph__line {
+    bottom: 26px;
+    top: 149px;
+  }
+
+  .demographics__graph__bar {
+    height: 17px;
+    background-color: #00aeef;
+  }
+}
+
+.demographics__graph__barchart--three {
+  .demographics__graph__line {
+    bottom: 33px;
+    top: 149px;
+  }
+
+  .demographics__graph__bar {
+    height: 28px;
+    background-color: $color-faded-red;
+  }
+}
+
+.demographics__graph__barchart--four .demographics__graph__bar {
+  height: 284px;
+  background-color: #25408f;
+}
+
+.demographics__graph__wrapper.not-visible {
+  .demographics__graph__bar {
+    height: 0;
+  }
+}
