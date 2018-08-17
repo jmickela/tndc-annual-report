@@ -214,4 +214,34 @@
 }
 
 
+// Breakpoint mixins
+@mixin tablet-small {
+  @media (min-width: #{$tablet-small}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin table-wide {
+  @media (min-width: #{$tablet-wide}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-wide {
+  @media (min-width: #{$desktop-wide}) {
+    @content;
+  }
+}
 
