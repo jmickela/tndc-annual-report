@@ -6,6 +6,12 @@
   background-color: $color-bluish;
 }
 
+.donorlist .container-fluid {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .donorlist__title {
   text-align: center;
   text-transform: uppercase;
@@ -42,6 +48,30 @@
 
 }
 
+.donorlist__individual__title {
+  @include rem('font-size', 22px);
+  @include rem('letter-spacing', 0.1px);
+  font-weight: bold;
+  line-height: 1.98;
+
+  text-transform: uppercase;
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.donorlist__individual__cols__wrapper {
+  @include rem('font-size', 14px);
+  @include rem('letter-spacing', 0.3px);
+  font-weight: 300;
+  line-height: 1.58;
+
+}
+
+
+.donorlist__individual__col {
+  @include rem('width', 294px);
+
+}
+
 .donorsearch__searchform__submit {
   @include rem('padding', 0 14px);
   background-color: #444444;
@@ -52,4 +82,35 @@
   border: 0;
   margin: 0;
   height: 100%;
+}
+
+.donorlist__rangeselect__list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.donorlist__rangeselect__radioitem {
+  position: absolute;
+  left: -314159px;
+
+  &:checked + label, &:hover + label {
+    background-color: rgba(#d8d8d8, 0.16);
+  }
+}
+
+.donorlist__rangeselect__radioitem__label {
+  @include rem('height', 71px);
+  @include rem('padding-left', 35px);
+  @include rem('font-size', 18px);
+  @include rem('letter-spacing', 0.5px);
+  font-weight: bold;
+  line-height: 2.44;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
