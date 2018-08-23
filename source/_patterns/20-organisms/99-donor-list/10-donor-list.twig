@@ -1,4 +1,18 @@
 {% set options = [
+  {name: '$50,000+', value: 'institutional-50000'},
+  {name: '$20,000 - $49,999', value: 'institutional-20000'},
+  {name: '$10,000 - $19,999', value: 'institutional-10000'},
+  {name: '$5,000 - $9,999', value: 'institutional-5000'},
+  {name: '$2,500 - $4,999', value: 'institutional-2500'},
+  {name: '$1,000 - $2,499', value: 'institutional-1000'},
+  {name: '$500 - $999', value: 'institutional-500'},
+  {name: '$250 - $499', value: 'institutional-250'},
+  {name: '$100 - $249', value: 'institutional-100'},
+  {name: '$0 - $99', value: 'institutional-00'},
+] %}
+
+
+{% set options = [
   {name: '$50,000+', value: 'individual-50000'},
   {name: '$20,000 - $49,999', value: 'individual-20000'},
   {name: '$10,000 - $19,999', value: 'individual-10000'},
@@ -27,6 +41,50 @@
       <i class="fas fa-search" title="{{ __('Submit Search') }}"></i>
     </button>
   </form>
+
+  <div class='donorlist__institutions container-fluid'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class='donorlist__institions__title'>
+          {{ __('Institutions') }}
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-3 col-xs-12'>
+
+        <div class='donorlist__rangeselect'>
+          <div class="donorlist__rangeselect__dropdown hidden-lg hidden-md">
+            <select name="institutional" class="donorlist__rangeselect__dropdown__select">
+              {% for option in options %}
+                <option value="{{ option.value }}">{{ option.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <ul class='donorlist__rangeselect__list hidden-sm hidden-xs'>
+            {% for option in options %}
+              <li class='donorlist__rangeselect__list__item'>
+                <input type='radio' 
+                  name='institutional' 
+                  class='donorlist__rangeselect__radioitem'
+                  value="{{ option.value }}"
+                  id='{{ option.value }}' />
+                <label
+                  class='donorlist__rangeselect__radioitem__label' 
+                  for='{{ option.value }}'>{{ option.name }}</label>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class='col-md-9 col-xs-12'>
+
+        <div class='donorlist__individual__cols__wrapper'>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class='donorlist__individual container-fluid'>
     <div class='row'>
