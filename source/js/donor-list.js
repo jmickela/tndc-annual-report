@@ -23,92 +23,90 @@ let institutionalDonors = [
   { "name": "Wells Fargo Foundation", "amount": 20000 },
 
 
-{ "name": "Anonymous", "amount": 10000 },
-{ "name": "Alexander M. & June L. Maisin Foundation of Jewish Community", "amount": 10000 },
-{ "name": "Carpenters 46 Northern California", "amount": 10000 },
-{ "name": "Compassionate Chefs", "amount": 10000 },
-{ "name": "Dolby Laboratories", "amount": 10000 },
-{ "name": "JPMorgan Chase & Company", "amount": 10000 },
-{ "name": "MAG Management, Inc.", "amount": 10000 },
-{ "name": "Nibbi Brothers General Contractors", "amount": 10000 },
-{ "name": "PNC Real Estate", "amount": 10000 },
-{ "name": "Sam Mazza Foundation", "amount": 10000 },
-{ "name": "West Coast Precision", "amount": 10000 },
-{ "name": "William G. Gilmore Foundation", "amount": 10000 },
+  { "name": "Anonymous", "amount": 10000 },
+  { "name": "Alexander M. & June L. Maisin Foundation of Jewish Community", "amount": 10000 },
+  { "name": "Carpenters 46 Northern California", "amount": 10000 },
+  { "name": "Compassionate Chefs", "amount": 10000 },
+  { "name": "Dolby Laboratories", "amount": 10000 },
+  { "name": "JPMorgan Chase & Company", "amount": 10000 },
+  { "name": "MAG Management, Inc.", "amount": 10000 },
+  { "name": "Nibbi Brothers General Contractors", "amount": 10000 },
+  { "name": "PNC Real Estate", "amount": 10000 },
+  { "name": "Sam Mazza Foundation", "amount": 10000 },
+  { "name": "West Coast Precision", "amount": 10000 },
+  { "name": "William G. Gilmore Foundation", "amount": 10000 },
 
-{ "name": "Anonymous", "amount": 5000 },
-{ "name": "Ann and Gordon Getty Foundation", "amount": 5000 },
-{ "name": "BRIDGE Housing Corporation", "amount": 5000 },
-{ "name": "California Pacific Medical Center", "amount": 5000 },
-{ "name": "Charis Fund", "amount": 5000 },
-{ "name": "Credit Suisse Americas Foundation", "amount": 5000 },
-{ "name": "D and H Construction", "amount": 5000 },
-{ "name": "David Baker Architects", "amount": 5000 },
-{ "name": "Dome Construction", "amount": 5000 },
-{ "name": "Engineering 350", "amount": 5000 },
-{ "name": "Entrust Partners Offshore", "amount": 5000 },
-{ "name": "Filice Insurance Agency", "amount": 5000 },
-{ "name": "First Republic Bank", "amount": 5000 },
-{ "name": "Forest City Development", "amount": 5000 },
-{ "name": "Frank H. Jernigan Charitable Foundation", "amount": 5000 },
-{ "name": "James C. Hormel Revocable Living Trust", "amount": 5000 },
-{ "name": "James E. Roberts-Obayashi Corporation", "amount": 5000 },
-{ "name": "Kaiser Permanente", "amount": 5000 },
-{ "name": "Law Offices of Michael Rossoff", "amount": 5000 },
-{ "name": "Lindquist von Husen & Joyce, LLP", "amount": 5000 },
-{ "name": "Low Income Investment Fund", "amount": 5000 },
-{ "name": "Mechanics Bank", "amount": 5000 },
-{ "name": "Related California Residential", "amount": 5000 },
-{ "name": "San Francisco Giants", "amount": 5000 },
-{ "name": "Tishman Speyer Properties, LP", "amount": 5000 },
-{ "name": "TMG Partners", "amount": 5000 },
-{ "name": "Transworld Construction, Inc.", "amount": 5000 },
-{ "name": "Valdez Painting", "amount": 5000 },
-{ "name": "Wells Fargo, SF Bay Region Community Development", "amount": 5000 },
-{ "name": "Zell Family Foundation", "amount": 5000 },
+  { "name": "Anonymous", "amount": 5000 },
+  { "name": "Ann and Gordon Getty Foundation", "amount": 5000 },
+  { "name": "BRIDGE Housing Corporation", "amount": 5000 },
+  { "name": "California Pacific Medical Center", "amount": 5000 },
+  { "name": "Charis Fund", "amount": 5000 },
+  { "name": "Credit Suisse Americas Foundation", "amount": 5000 },
+  { "name": "D and H Construction", "amount": 5000 },
+  { "name": "David Baker Architects", "amount": 5000 },
+  { "name": "Dome Construction", "amount": 5000 },
+  { "name": "Engineering 350", "amount": 5000 },
+  { "name": "Entrust Partners Offshore", "amount": 5000 },
+  { "name": "Filice Insurance Agency", "amount": 5000 },
+  { "name": "First Republic Bank", "amount": 5000 },
+  { "name": "Forest City Development", "amount": 5000 },
+  { "name": "Frank H. Jernigan Charitable Foundation", "amount": 5000 },
+  { "name": "James C. Hormel Revocable Living Trust", "amount": 5000 },
+  { "name": "James E. Roberts-Obayashi Corporation", "amount": 5000 },
+  { "name": "Kaiser Permanente", "amount": 5000 },
+  { "name": "Law Offices of Michael Rossoff", "amount": 5000 },
+  { "name": "Lindquist von Husen & Joyce, LLP", "amount": 5000 },
+  { "name": "Low Income Investment Fund", "amount": 5000 },
+  { "name": "Mechanics Bank", "amount": 5000 },
+  { "name": "Related California Residential", "amount": 5000 },
+  { "name": "San Francisco Giants", "amount": 5000 },
+  { "name": "Tishman Speyer Properties, LP", "amount": 5000 },
+  { "name": "TMG Partners", "amount": 5000 },
+  { "name": "Transworld Construction, Inc.", "amount": 5000 },
+  { "name": "Valdez Painting", "amount": 5000 },
+  { "name": "Wells Fargo, SF Bay Region Community Development", "amount": 5000 },
+  { "name": "Zell Family Foundation", "amount": 5000 },
 
-{ "name": "Anonymous", "amount": 2500},
-{ "name": "Alice Phelan Sullivan Corporation", "amount": 2500},
-{ "name": "Arthur J. Gallagher & Co. Insurance Services", "amount": 2500},
-{ "name": "ASB Capital Management", "amount": 2500},
-{ "name": "Bank of America", "amount": 2500},
-{ "name": "Brayer Electric", "amount": 2500},
-{ "name": "Charles Schwab Foundation", "amount": 2500},
-{ "name": "Chinatown Community Development Center", "amount": 2500},
-{ "name": "Citi", "amount": 2500},
-{ "name": "Community Economics, Inc.", "amount": 2500},
-{ "name": "Cova Hotel", "amount": 2500},
-{ "name": "Crescent Heights", "amount": 2500},
-{ "name": "DWA of Belvedere Company", "amount": 2500},
-{ "name": "EACH Foundation", "amount": 2500},
-{ "name": "East Bay Asian Local Development Corporation", "amount": 2500},
-{ "name": "Eden Housing", "amount": 2500},
-{ "name": "Federal Home Loan Bank of San Francisco", "amount": 2500},
-{ "name": "Flynn Investments", "amount": 2500},
-{ "name": "Give Something Back Fund at East Bay Community Foundation", "amount": 2500},
-{ "name": "Glide Memorial Church", "amount": 2500},
-{ "name": "Great Escape Fire Escape Services", "amount": 2500},
-{ "name": "Hanson Bridgett, LLP.", "amount": 2500},
-{ "name": "Helms and Associates CPAS, LLP", "amount": 2500},
-{ "name": "Herman Coliver Locus Architecture", "amount": 2500},
-{ "name": "Hilton San Francisco Union Square", "amount": 2500},
-{ "name": "Martin and Sylvia Greene Foundation", "amount": 2500},
-{ "name": "Merritt Community Capital Corporation", "amount": 2500},
-{ "name": "NextGen America", "amount": 2500},
-{ "name": "Pacific Gas and Electric Company", "amount": 2500},
-{ "name": "Paulett Taggart Architects", "amount": 2500},
-{ "name": "Prado Group", "amount": 2500},
-{ "name": "Russell-Madoo Fund", "amount": 2500},
-{ "name": "San Francisco Association of Realtors", "amount": 2500},
-{ "name": "Silicon Valley Bank", "amount": 2500},
-{ "name": "Swinerton Builders", "amount": 2500},
-{ "name": "The Seligman Family Foundation", "amount": 2500},
-{ "name": "U.S. Trust Company, N.A.", "amount": 2500},
-{ "name": "UC Hastings College of the Law", "amount": 2500},
-{ "name": "Umpqua Bank", "amount": 2500},
-{ "name": "Wall and Ceiling Alliance (WACA)", "amount": 2500},
-
-
+  { "name": "Anonymous", "amount": 2500},
+  { "name": "Alice Phelan Sullivan Corporation", "amount": 2500},
+  { "name": "Arthur J. Gallagher & Co. Insurance Services", "amount": 2500},
+  { "name": "ASB Capital Management", "amount": 2500},
+  { "name": "Bank of America", "amount": 2500},
+  { "name": "Brayer Electric", "amount": 2500},
+  { "name": "Charles Schwab Foundation", "amount": 2500},
+  { "name": "Chinatown Community Development Center", "amount": 2500},
+  { "name": "Citi", "amount": 2500},
+  { "name": "Community Economics, Inc.", "amount": 2500},
+  { "name": "Cova Hotel", "amount": 2500},
+  { "name": "Crescent Heights", "amount": 2500},
+  { "name": "DWA of Belvedere Company", "amount": 2500},
+  { "name": "EACH Foundation", "amount": 2500},
+  { "name": "East Bay Asian Local Development Corporation", "amount": 2500},
+  { "name": "Eden Housing", "amount": 2500},
+  { "name": "Federal Home Loan Bank of San Francisco", "amount": 2500},
+  { "name": "Flynn Investments", "amount": 2500},
+  { "name": "Give Something Back Fund at East Bay Community Foundation", "amount": 2500},
+  { "name": "Glide Memorial Church", "amount": 2500},
+  { "name": "Great Escape Fire Escape Services", "amount": 2500},
+  { "name": "Hanson Bridgett, LLP.", "amount": 2500},
+  { "name": "Helms and Associates CPAS, LLP", "amount": 2500},
+  { "name": "Herman Coliver Locus Architecture", "amount": 2500},
+  { "name": "Hilton San Francisco Union Square", "amount": 2500},
+  { "name": "Martin and Sylvia Greene Foundation", "amount": 2500},
+  { "name": "Merritt Community Capital Corporation", "amount": 2500},
+  { "name": "NextGen America", "amount": 2500},
+  { "name": "Pacific Gas and Electric Company", "amount": 2500},
+  { "name": "Paulett Taggart Architects", "amount": 2500},
+  { "name": "Prado Group", "amount": 2500},
+  { "name": "Russell-Madoo Fund", "amount": 2500},
+  { "name": "San Francisco Association of Realtors", "amount": 2500},
+  { "name": "Silicon Valley Bank", "amount": 2500},
+  { "name": "Swinerton Builders", "amount": 2500},
+  { "name": "The Seligman Family Foundation", "amount": 2500},
+  { "name": "U.S. Trust Company, N.A.", "amount": 2500},
+  { "name": "UC Hastings College of the Law", "amount": 2500},
+  { "name": "Umpqua Bank", "amount": 2500},
+  { "name": "Wall and Ceiling Alliance (WACA)", "amount": 2500}
 ];
 
 let individualDonors = [
@@ -1641,6 +1639,8 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
     });
   }
 
+  
+
   // If the slider is already enabled, destroy it.
   if ($('.donorlist__institution__cols__wrapper').hasClass('flickity-enabled')) {
     $('.donorlist__institution__cols__wrapper').flickity('destroy');
@@ -1649,23 +1649,71 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   // Remove any existing children
   $('.donorlist__institution__cols__wrapper').empty();
 
-  // Break array into max num chunks
 
+  // The upper range is a special case and includes multiple ranges.
+  if (filterVals.lower == 10000) {
+    let range1 = names.filter(function (item) {
+      return item.amount < 15000;
+    });
 
-  for (var j = 0; j < names.length / 10; j++) {
+    let range2 = names.filter(function (item) {
+      return item.amount > 15000 && item.amount <= 50000;
+    });
+
+    let ranges = [
+      {
+        'title': 'Top Range',
+        'items': range1
+      },
+      {
+        'title': 'Other range',
+        'items': range1
+      }
+    ];
+
     var container = document.createElement('div');
-    container.className = "donorlist__institution__col";
+    container.className = 'donorlist__institution__col--top';
 
-    $('.donorlist__institution__cols__wrapper').append(container);
+    ranges.forEach(element => {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'donorlist__institution__items__wrapper';
+      $(wrapper).append('<h4>' + element.title + '</h4>');
 
-    for (var i = 0; i < itemCount && names.length; i++) {
-      var name = names.pop();
-      $(container).append("<div>" + name.name + "</div>");
+      var items = document.createElement('div');
+      items.className = 'donorlist__institution__items';
+
+      for (let i = 0; i < element.items.length; i++) {
+        var name = element.items.shift();
+        $(items).append('<div>' + name + '</div>');
+      }
+      $(wrapper).append(items);
+      $(container).append(wrapper);
+      
+    });
+    $('donorlist__institution__cols__wrapper').append(container);
+
+  } else {
+    // Break array into max num chunks
+
+
+    for (var j = 0; j < names.length / 10; j++) {
+      var container = document.createElement('div');
+      container.className = "donorlist__institution__col";
+
+      $('.donorlist__institution__cols__wrapper').append(container);
+
+      for (var i = 0; i < itemCount && names.length; i++) {
+        var name = names.pop();
+        $(container).append("<div>" + name.name + "</div>");
+      }
     }
+
+    $('.donorlist__institution__cols__wrapper').flickity({
+      cellAlign: 'left',
+      contain: true,
+    });
   }
 
-  $('.donorlist__institution__cols__wrapper').flickity({
-    cellAlign: 'left',
-    contain: true,
-  });
+
+
 }
