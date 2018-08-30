@@ -75,9 +75,11 @@
     }
 
     &__piechart__container {
-      height: $piechart-height;
+      bottom: 0;
+      left: 0;
       position: absolute;
-      width: 100%;
+      right: 0;
+      top: 0;
     }
 
     &__title {
@@ -106,8 +108,9 @@
 
     &__labels {
       $left-width: 30px;
-      height: $piechart-height;
       display: none;
+      height: $piechart-height;
+      position: relative;
       @media (min-width: $piechart-breakpoint) {
       @include flexbox;
       }
@@ -252,9 +255,11 @@
     }
 
     &__piechart__container {
-      height: $piechart-height;
+      bottom: 0;
+      left: 0;
       position: absolute;
-      width: 100%;
+      right: 0;
+      top: 0;
     }
 
     &__title {
@@ -281,8 +286,9 @@
 
     &__labels {
       $left-width: 30px;
-      height: $piechart-height;
       display: none;
+      height: $piechart-height;
+      position: relative;
       @media (min-width: $piechart-breakpoint) {
         @include flexbox;
       }
