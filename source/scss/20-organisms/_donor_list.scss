@@ -3,6 +3,7 @@
 
 .donorlist {
   @include rem('padding-top', 40px);
+  @include rem('padding-bottom', 100px);
   background-color: $color-bluish;
 }
 
@@ -48,7 +49,7 @@
 
 }
 
-.donorlist__individual__title {
+.donorlist__individual__title, .donorlist__institions__title {
   @include rem('font-size', 22px);
   @include rem('letter-spacing', 0.1px);
   font-weight: bold;
@@ -64,6 +65,20 @@
   font-weight: 300;
   line-height: 1.58;
 
+  @include rem('padding', 19px 60px 0 60px);
+
+  .flickity-page-dots {
+    bottom: -45px;
+
+    .dot {
+      background-color: #e4e4e5;
+      opacity: 1;
+    }
+
+    .dot.is-selected {
+      background-color: #ababb6;
+    }
+  }
 }
 
 
