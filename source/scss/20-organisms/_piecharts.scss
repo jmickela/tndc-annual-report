@@ -39,11 +39,13 @@
   }
 
   &__title {
-    @include rem('font-size', 35px);
-    font-weight: bold;
-    @include rem('letter-spacing', .8px);
+    // @include rem('font-size', 35px);
+    // font-weight: bold;
+    // @include rem('letter-spacing', .8px);
+    @include org-title;
     @include rem('margin-bottom', 56px);
-    @include piechart-title;
+    padding-top: 1.6em;
+    
   }
 
   &--revenue {
@@ -52,7 +54,7 @@
     }
 
     &__image {
-      background: url('/images/20-organisms/70-piechart/resources/Total Revenue_300pxWide.png') no-repeat;
+      background: url('/images/20-organisms/70-piechart/Total Revenue_300pxWide.png') no-repeat;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       display: block;
@@ -63,7 +65,7 @@
       width: 300px; 
 
       @media (min-width: 600px) {
-        background: url('/images/20-organisms/70-piechart/resources/Total Revenue_588pxWide.png');
+        background: url('/images/20-organisms/70-piechart/Total Revenue_588pxWide.png');
         height: 359px; 
         padding-left: 588px; 
         width: 588px;
@@ -232,7 +234,7 @@
     }
 
     &__image {
-      background: url('/images/20-organisms/70-piechart/resources/Total Expenses_300pxWide.png') no-repeat;
+      background: url('/images/20-organisms/70-piechart/Total Expenses_300pxWide.png') no-repeat;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       display: block;
@@ -243,7 +245,7 @@
       width: 300px; 
 
       @media (min-width: 600px) {
-        background: url('/images/20-organisms/70-piechart/resources/Total Expenses_570pxWide.png');
+        background: url('/images/20-organisms/70-piechart/Total Expenses_570pxWide.png');
         height: 366px; 
         padding-left: 570px; 
         width: 570px;
