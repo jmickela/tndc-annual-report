@@ -13,12 +13,12 @@
   }
 
   &__overlay {
-    background-color: #ec5b23;
+    background-color: $color-tomato;
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
     @media (min-width: 780px) {
-      background-color: rgba(#ec5b23,.8);
+      background-color: rgba($color-tomato,.8);
       height: 100%;
       margin-left: auto;
       @include rem('padding', 0 70px 50px);
