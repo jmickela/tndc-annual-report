@@ -1,0 +1,218 @@
+@import "../variables";
+@import "../mixins";
+
+.thrive {
+  &__container {
+    font-family: $font-monserrat;
+    
+    @media (min-width: 780px) {
+      background: url('/images/20-organisms/40-thrive/seniorfemaledoorwaycrop.jpg');
+      background-size: cover;
+      background-position: top right;
+      position: relative;
+    }
+  }
+
+  &__overlay {
+    background-color: $color-dark-sea-green;
+    @include rem('padding', 0 20px 30px);
+    width: 100%;
+
+    @media (min-width: 780px) {
+      background-color: rgba($color-dark-sea-green,.8);
+      height: 100%;
+      margin-right: auto;
+      @include rem('padding-left', 150px);
+      @include rem('padding-right', 70px);
+      @include rem('padding-bottom', 40px);
+      width: 780px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.37em;
+    @include org-title;
+    // padding-bottom: 1.85em;
+    padding-top: 1.6em;
+    text-align: center;
+
+    @media (min-width: 780px) {
+      @include poly-fluid-sizing('left', (780px: 20px, 1440px: 150px));
+      margin-right: auto;
+      text-align: left;
+      width: 20em;
+      position: absolute;
+    }
+  }
+
+  &__statistics {
+    @include rem('font-size', 24px);
+    @include rem('letter-spacing', .4px);
+    line-height: 1.36;
+    // @include rem('padding-bottom', 35px);
+
+    @media (min-width: 780px) {
+      // @include poly-fluid-sizing('padding-left', (780px: 0, 1440px: 80px));
+      // @include poly-fluid-sizing('padding-right', (780px: 0, 1440px: 80px));
+      @include poly-fluid-sizing('padding-top', (780px: 162px, 1440px: 182px));
+    }  
+  }
+
+  &__bar-graph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @include rem('padding-bottom', 15px);
+    position: relative;
+    width: 94%;
+
+    img {
+      // @include rem('max-width', 320px);
+      width: 100%;
+
+      &:nth-of-type(2) {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        width: 90%;
+      }
+
+    }
+
+    &-disclaimer {
+      @include rem('font-size', 9px);
+      margin-left: auto;
+      margin-right: auto;
+      @include rem('padding-bottom', 38px);
+      width: 90%;
+    }
+  }
+
+  &__people-graph {
+    margin-left: auto;
+    margin-right: auto;
+    @include rem('padding-bottom', 20px);
+    text-align: center;
+    width: 94%;
+
+    &__key {
+      display: flex;
+      flex-wrap: wrap;
+      @include rem('font-size', 8px);
+      margin-left: auto;
+      margin-right: auto;
+      @include rem('padding-bottom', 40px);
+      @include rem('padding-left', 20px);
+      text-align: left;
+      text-transform: uppercase;
+      width: 94%;
+
+      &--column {
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        // flex-wrap: wrap;
+        width: 100%;
+
+        @media (min-width: 600px) {
+          flex: 1 1 50%;
+        }
+
+        &.one {
+
+          .thrive__people-graph__key--row.one {
+            .thrive__people-graph__key--color-box {
+              background-color: #f3bd3b;
+            }
+          }
+
+          .thrive__people-graph__key--row.two {
+            .thrive__people-graph__key--color-box {
+              background-color: #ef9021;
+            }
+          }
+
+          .thrive__people-graph__key--row.three {
+            .thrive__people-graph__key--color-box {
+              background-color: #25408f;
+            }
+          }
+        }
+
+        &.two {
+          .thrive__people-graph__key--row.one {
+            .thrive__people-graph__key--color-box {
+              background-color: #00aeef;
+            }
+          }
+
+          .thrive__people-graph__key--row.two {
+            .thrive__people-graph__key--color-box {
+              background-color: #99ce85;
+            }
+          }
+
+          .thrive__people-graph__key--row.three {
+            .thrive__people-graph__key--color-box {
+              background-color: #ffdc7d;
+            }
+          }
+
+          .thrive__people-graph__key--row.four {
+            .thrive__people-graph__key--color-box {
+              background-color: #ec5c25;
+            }
+          }
+        }
+      }
+
+      &--row {
+        display: flex;
+        flex-direction: row;
+        flex: 1 0 auto;
+        @include rem('padding', 4px 0);
+      }
+
+      &--color-box {
+        border: 1px solid white;
+        flex: 0 0 10px;
+        @include rem('height', 8px);
+        @include rem('width', 10px);
+        // display: table-cell;
+      }
+
+      &--number {
+        // display: table-cell;
+        flex: 0 0 4em;
+        @include rem ('padding-left', 4px);
+      }
+
+      &--label {
+        // display: table-cell;
+        flex: 1 0 auto;
+        height: auto;
+        max-width: calc(100% - 14px - 4em - 5px);
+      }
+    }
+
+    &-disclaimer {
+      @include rem('font-size', 9px);
+      margin-left: auto;
+      margin-right: auto;
+      width: 94%;
+    }
+  }
+
+  &__statistic-description {
+    @include rem('letter-spacing', .75px);
+    @include rem('padding-bottom', 32px);
+    text-align: center;
+  }
+
+  &__statistic-number {
+    @include rem('font-size', 29px);
+    font-weight: bold;
+  }
+}
