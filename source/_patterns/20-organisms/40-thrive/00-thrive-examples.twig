@@ -7,13 +7,22 @@
       <div class="thrive__statistic-description first">
         Majority of our residents live on <br /><span class="thrive__statistic-number">$15,000 a year or $1,300 a month</span>
       </div>
-      <div class="thrive__bar-graph ">
+      {% include "10-molecules/40-icon-with-text/01-icon-with-text.twig" with {
+        icon_class: "thrive__bar-graph",
+        icons: [
+          '/images/20-organisms/40-thrive/Bar_Graph.svg',
+          '/images/20-organisms/40-thrive/Bar_Graph_Overlay_Text.svg'
+        ],
+        text_class: "thrive__bar-graph-disclaimer",
+        text_content: "*Incomes are based on a one-person household according to the Mayor’s Office of Housing and Community Development"
+      } %}
+      {# <!--<div class="thrive__bar-graph">
         <img src='/images/20-organisms/40-thrive/Bar_Graph.svg' />
         <img src='/images/20-organisms/40-thrive/Bar_Graph_Overlay_Text.svg' />
       </div>
       <div class="thrive__bar-graph-disclaimer">
         *Incomes are based on a one-person household according to the Mayor’s Office of Housing and Community Development
-      </div>
+      </div> --> #}
       <div class="thrive__people-graph ">
         <img src='/images/20-organisms/40-thrive/People.svg' />
       </div>

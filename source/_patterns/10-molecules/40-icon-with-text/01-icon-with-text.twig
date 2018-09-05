@@ -1,0 +1,39 @@
+{# 
+
+Required Data:
+icons: an array of icon urls
+text_content: the text to include below the icon(s)
+
+
+Optional Data:
+icon_class: you can specify a class for the icon(s)
+text_class: you can specify a class for the div
+
+
+ex: 
+
+icon_class: "thrive__bar-graph",
+icons: [
+  '/images/20-organisms/40-thrive/Bar_Graph.svg',
+  '/images/20-organisms/40-thrive/Bar_Graph_Overlay_Text.svg'
+],
+text_class: "thrive__bar-graph-disclaimer",
+text_content: "*Incomes are based on a one-person household according to the Mayor’s Office of Housing and Community Development"
+
+
+#}
+
+{% if icons and text_content %}
+  <div class="{{ icon_class ? icon_class : 'icon-with-text' }}">
+    {{ title_content }}
+  </div>
+{% endif %}
+
+<div class="{{ icon_class ? icon_class : 'icon-div' }}">
+  {% for icon in icons %}
+    <img src='{{ icon }}' />
+  {% endfor %}
+</div>
+<div class="{{ text_class ? text_class : 'text-div' }}">
+  {{ text_content }}
+</div>

@@ -37,10 +37,10 @@
     text-align: center;
 
     @media (min-width: 780px) {
-      @include poly-fluid-sizing('left', (780px: 20px, 1440px: 150px));
+      @include rem('left', 160px);
       margin-right: auto;
       text-align: left;
-      width: 20em;
+      width: 21em;
       position: absolute;
     }
   }
