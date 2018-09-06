@@ -6,22 +6,22 @@
 
   &__container {
     font-family: $font-monserrat;
+    background: url('/images/20-organisms/38-sanfrancisco/boedekkerparkcrop.jpg');
+    background-size: cover;
+    background-position: center;
     
     @media (min-width: $overlay-width) {
-      background: url('/images/20-organisms/38-sanfrancisco/boedekkerparkcrop.jpg');
-      background-size: cover;
-      background-position: center;
+      
       position: relative;
     }
   }
 
   &__overlay {
-    background-color: $color-turquoise-blue;
+    background-color: rgba($color-turquoise-blue,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
     @media (min-width: $overlay-width) {
-      background-color: rgba($color-turquoise-blue,.8);
       height: 100%;
       margin-right: auto;
       @include rem('padding-left', 150px);

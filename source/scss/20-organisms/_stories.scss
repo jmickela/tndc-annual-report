@@ -2,29 +2,26 @@
 @import "../mixins";
 
 .stories {
+  $overlay-width: 735px;
   &__container {
+    background: url('/images/20-organisms/39-stories/jenniferadoradoorwaycrop.jpg');
+    background-size: cover;
+    background-position: left;
     font-family: $font-monserrat;
-    
-    @media (min-width: 780px) {
-      background: url('/images/20-organisms/39-stories/jenniferadoradoorwaycrop.jpg');
-      background-size: cover;
-      background-position: center;
-    }
   }
 
   &__overlay {
-    background-color: $color-tomato;
+    background-color: rgba($color-tomato,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
-    @media (min-width: 780px) {
-      background-color: rgba($color-tomato,.8);
+    @media (min-width: $overlay-width) {
       height: 100%;
       margin-left: auto;
       @include rem('padding-bottom', 73px);
       @include rem('padding-left', 70px);
       @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 224px));
-      width: 780px;
+      width: $overlay-width;
     }
   }
 

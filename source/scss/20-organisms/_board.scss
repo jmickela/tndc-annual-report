@@ -5,23 +5,19 @@
   $overlay-width: 620px;
 
   &__container {
+    background: url('/images/20-organisms/90-board/leaderscrop.jpg');
+    background-size: cover;
+    background-position: left top;
     font-family: $font-monserrat;
-    
-    @media (min-width: $overlay-width) {
-      background: url('/images/20-organisms/90-board/leaderscrop.jpg');
-      background-size: cover;
-      background-position: left top;
-      position: relative;
-    }
+    position: relative;
   }
 
   &__overlay {
-    background-color: $color-turquoise-blue;
+    background-color: rgba($color-turquoise-blue,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
     @media (min-width: $overlay-width) {
-      background-color: rgba($color-turquoise-blue,.8);
       height: 100%;
       margin-right: auto;
       @include rem('padding-bottom', 24px);

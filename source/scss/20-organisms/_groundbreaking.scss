@@ -3,23 +3,16 @@
 
 .groundbreaking {
   &__container {
+    background: url('/images/20-organisms/50-groundbreaking/taylor_aerial.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: $font-monserrat;
-    
-    @media (min-width: 780px) {
-      background: url('/images/20-organisms/50-groundbreaking/taylor_aerial.jpg');
-      background-size: cover;
-      background-position: center;
-    }
   }
 
   &__overlay {
-    background-color: $color-medium-blue;
+    background-color: rgba($color-medium-blue,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
-
-    @media (min-width: 780px) {
-      background-color: rgba($color-medium-blue,.8);
-    }
   }
 
   &__title {

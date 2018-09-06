@@ -2,30 +2,27 @@
 @import "../mixins";
 
 .thrive {
+  $overlay-width: 765px;
   &__container {
+    background: url('/images/20-organisms/40-thrive/seniorfemaledoorwaycrop.jpg');
+    background-size: cover;
+    background-position: right;
     font-family: $font-monserrat;
-    
-    @media (min-width: 780px) {
-      background: url('/images/20-organisms/40-thrive/seniorfemaledoorwaycrop.jpg');
-      background-size: cover;
-      background-position: 10% 0%;
-      position: relative;
-    }
+    position: relative;
   }
 
   &__overlay {
-    background-color: $color-dark-sea-green;
+    background-color: rgba($color-dark-sea-green,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
-    @media (min-width: 780px) {
-      background-color: rgba($color-dark-sea-green,.8);
+    @media (min-width: $overlay-width) {
       height: 100%;
       margin-right: auto;
       @include rem('padding-left', 150px);
       @include rem('padding-right', 70px);
       @include rem('padding-bottom', 40px);
-      width: 780px;
+      width: $overlay-width;
     }
   }
 
@@ -36,7 +33,7 @@
     padding-top: 1.6em;
     text-align: center;
 
-    @media (min-width: 780px) {
+    @media (min-width: $overlay-width) {
       @include rem('left', 160px);
       margin-right: auto;
       text-align: left;
@@ -51,10 +48,10 @@
     line-height: 1.36;
     // @include rem('padding-bottom', 35px);
 
-    @media (min-width: 780px) {
+    @media (min-width: $overlay-width) {
       // @include poly-fluid-sizing('padding-left', (780px: 0, 1440px: 80px));
       // @include poly-fluid-sizing('padding-right', (780px: 0, 1440px: 80px));
-      @include poly-fluid-sizing('padding-top', (780px: 162px, 1440px: 182px));
+      @include poly-fluid-sizing('padding-top', ($overlay-width: 162px, 1440px: 182px));
     }  
   }
 

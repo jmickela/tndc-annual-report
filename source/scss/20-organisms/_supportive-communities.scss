@@ -2,27 +2,24 @@
 @import "../mixins";
 
 .supportive-communities {
+  $overlay-width: 780px;
   &__container {
+    background: url('/images/20-organisms/60-supportive-communities/produce.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: $font-monserrat;
-    
-    @media (min-width: 780px) {
-      background: url('/images/20-organisms/60-supportive-communities/produce.jpg');
-      background-size: cover;
-      background-position: center;
-    }
   }
 
   &__overlay {
-    background-color: $color-tomato;
+    background-color: rgba($color-tomato,.8);
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
-    @media (min-width: 780px) {
-      background-color: rgba($color-tomato,.8);
+    @media (min-width: $overlay-width) {
       height: 100%;
       margin-left: auto;
       @include rem('padding', 0 70px 50px);
-      width: 780px;
+      width: $overlay-width;
     }
   }
 
@@ -31,8 +28,8 @@
     @include org-title;
     // padding-bottom: 1.85em;
     padding-top: 1.8em;
-    @include poly-fluid-sizing('padding-left', (780px: 0, 1440px: 20px));
-    @include poly-fluid-sizing('padding-right', (780px: 0, 1440px: 20px));
+    @include poly-fluid-sizing('padding-left', ($overlay-width: 0, 1440px: 20px));
+    @include poly-fluid-sizing('padding-right', ($overlay-width: 0, 1440px: 20px));
   }
 
   &__statistics {
@@ -41,9 +38,9 @@
     line-height: 1.36;
     @include rem('padding-bottom', 35px);
 
-    @media (min-width: 780px) {
-      @include poly-fluid-sizing('padding-left', (780px: 0, 1440px: 80px));
-      @include poly-fluid-sizing('padding-right', (780px: 0, 1440px: 80px));
+    @media (min-width: $overlay-width) {
+      @include poly-fluid-sizing('padding-left', ($overlay-width: 0, 1440px: 80px));
+      @include poly-fluid-sizing('padding-right', ($overlay-width: 0, 1440px: 80px));
     }  
   }
 
