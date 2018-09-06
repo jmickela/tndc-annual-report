@@ -25,6 +25,7 @@
 .donorlist__searchform {
   @include rem('height', 40px);
   @include rem('width', 270px);
+  @include rem('margin-bottom', 40px);
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -59,15 +60,17 @@
   border-bottom: 2px solid #d8d8d8;
 }
 
-.donorlist__individual__cols__wrapper {
+.donorlist__individual__cols__wrapper, .donorlist__institution__cols__wrapper {
   @include rem('font-size', 14px);
   @include rem('letter-spacing', 0.3px);
   font-weight: 300;
   line-height: 1.58;
 
-  @include rem('padding', 19px 60px 0 60px);
+  //@include rem('padding', 19px 60px 0 60px);
 
   .flickity-page-dots {
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -45px;
 
     .dot {
@@ -81,10 +84,27 @@
   }
 }
 
+.donorlist__individual__col, .donorlist__institution__col {
+  @include rem('width', 320px);
+  @include rem('padding-right', 40px);
+}
 
-.donorlist__individual__col {
-  @include rem('width', 294px);
+.donorlist__institutions {
+  @include rem('padding-bottom', 65px);
+}
 
+.donorlist__institution__cols__wrapper,
+.donorlist__individual__cols__wrapper {
+  @include rem('padding', 19px 60px 0 60px);
+}
+
+.donorlist__institution__cols__wrapper.flickity-enabled,
+.donorlist__individual__cols__wrapper.flickity-enabled {
+
+  .donorlist__individual__col, .donorlist__institution__col {
+    @include rem('width', 420px);
+    max-width: 100%;
+  }
 }
 
 .donorsearch__searchform__submit {
@@ -128,4 +148,40 @@
   margin-bottom: 0;
   display: flex;
   align-items: center;
+}
+
+// Mobile dropdown
+.donorlist__rangeselect__dropdown {
+  text-align: center;
+}
+
+.donorlist__rangeselect__dropdown__select {
+  @include rem('margin-top', 40px);
+  color: black;
+  width: 60%;
+}
+
+// One off for the top tier of the institutional donors
+
+.donorlist__institution__col--top {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+
+  @media (min-width: 768px) {
+    max-height: 650px;
+
+    .donorlist__institution__items__wrapper {
+      @include rem('max-width', 400px);
+      @include rem('margin-right', 40px);
+    }
+  }
+
+  .donorlist__institution__col__title {
+    @include rem('padding-bottom', 6px);
+    border-bottom: 1px solid white;
+    font-weight: bold;
+  }
+
 }

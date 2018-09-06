@@ -1,12 +1,12 @@
 {% set institutionalOptions = [
   {name: '$10,000 - 100,000+', value: 'institutional-10000', lower: 10000},
-  {name: '$5,000 - $9,999', value: 'institutional-5000', lower: 100, upper: 249},
-  {name: '$2,500 - $4,999', value: 'institutional-2500', lower: 100, upper: 249},
-  {name: '$1,000 - $2,499', value: 'institutional-1000', lower: 100, upper: 249},
-  {name: '$500 - $999', value: 'institutional-500', lower: 100, upper: 249},
-  {name: '$250 - $499', value: 'institutional-250', lower: 100, upper: 249},
+  {name: '$5,000 - $9,999', value: 'institutional-5000', lower: 5000, upper: 9999},
+  {name: '$2,500 - $4,999', value: 'institutional-2500', lower: 2500, upper: 4999},
+  {name: '$1,000 - $2,499', value: 'institutional-1000', lower: 1000, upper: 2499},
+  {name: '$500 - $999', value: 'institutional-500', lower: 500, upper: 999},
+  {name: '$250 - $499', value: 'institutional-250', lower: 250, upper: 499},
   {name: '$100 - $249', value: 'institutional-100', lower: 100, upper: 249},
-  {name: '$0 - $99', value: 'institutional-00', lower: 100, upper: 249},
+  {name: '$0 - $99', value: 'institutional-00', lower: 0, upper: 99},
 ] %}
 
 
@@ -54,7 +54,8 @@
         <div class='donorlist__rangeselect'>
           <div class="donorlist__rangeselect__dropdown hidden-lg hidden-md">
             <select name="institutional" class="donorlist__rangeselect__dropdown__select">
-              {% for option in institutionalOptions %}
+              <option value="all" selected="selected">All</option>
+                {% for option in institutionalOptions %}
                 <option value="{{ option.value }}">{{ option.name }}</option>
               {% endfor %}
             </select>
@@ -78,10 +79,7 @@
         </div>
       </div>
       <div class='col-md-9 col-xs-12'>
-
-        <div class='donorlist__individual__cols__wrapper'>
-          
-        </div>
+        <div class='donorlist__institution__cols__wrapper'></div>
       </div>
     </div>
   </div>
@@ -100,6 +98,7 @@
         <div class='donorlist__rangeselect'>
           <div class="donorlist__rangeselect__dropdown hidden-lg hidden-md">
             <select name="individual" class="donorlist__rangeselect__dropdown__select">
+              <option value="all" selected="selected">All</option>
               {% for option in individualOptions %}
                 <option value="{{ option.value }}">{{ option.name }}</option>
               {% endfor %}
