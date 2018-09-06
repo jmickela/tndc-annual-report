@@ -288,7 +288,6 @@
 @mixin org-title($color: white) {
   font-family: $font-monserrat;
   font-weight: bold;
-  @include rem('font-size', 36px);
   @include poly-fluid-sizing('font-size', (300px: 22px, 1440px: 36px));
   letter-spacing: .05rem;
   @include rem('letter-spacing', .5px);
