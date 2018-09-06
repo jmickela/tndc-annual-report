@@ -1,16 +1,16 @@
 @import "../variables";
 @import "../mixins";
 
-.sanfrancisco {
-  $overlay-width: 549px;
+.board {
+  $overlay-width: 620px;
 
   &__container {
     font-family: $font-monserrat;
     
     @media (min-width: $overlay-width) {
-      background: url('/images/20-organisms/38-sanfrancisco/boedekkerparkcrop.jpg');
+      background: url('/images/20-organisms/90-board/leaderscrop.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: left top;
       position: relative;
     }
   }
@@ -24,27 +24,23 @@
       background-color: rgba($color-turquoise-blue,.8);
       height: 100%;
       margin-right: auto;
-      @include rem('padding-left', 150px);
+      @include rem('padding-bottom', 24px);
+      @include rem('padding-left', 115px);
       @include rem('padding-right', 45px);
-      @include rem('padding-bottom', 30px);
       width: $overlay-width;
     }
   }
 
   &__title {
-    margin-bottom: 1.37em;
+    margin-bottom: .85em;
     @include org-title;
-    // padding-bottom: 1.85em;
-    padding-right: 2em;
-    padding-top: 1.3em;
+    padding-top: 1.7em;
     text-align: center;
 
     @media (min-width: $overlay-width) {
-      @include rem('left', 150px);
       margin-right: auto;
       text-align: left;
       max-width: 18em;
-      position: absolute;
     }
   }
 
@@ -52,17 +48,17 @@
     @include rem('font-size', 16px);
     @include rem('letter-spacing', .17px);
     line-height: 1.5;
-    @include rem('padding-bottom', 35px);
     position: relative;
-    padding-top: 0;
-    @media (min-width: $overlay-width) {
-      @include poly-fluid-sizing('padding-top', ($overlay-width: 130px, 1440px: 185px));
-    }
-    
+    padding-top: 0;    
   }
 
   &__body-text {
     text-align: left;
+
+    &__corrections {
+      max-width: 24em;
+      @include rem('padding-top', 21px);
+    }
 
     p {
       @include rem('margin-bottom', 24px);
