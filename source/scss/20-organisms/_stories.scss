@@ -1,13 +1,153 @@
 @import "../variables";
 @import "../mixins";
 
+// one looks good down to 992px
+// two looks good down to 992px
+
+
 .stories {
   $overlay-width: 735px;
+  $slider-breakpoint: 768px;
   &__container {
-    background: url('/images/20-organisms/39-stories/jenniferadoradoorwaycrop.jpg');
-    background-size: cover;
-    background-position: left;
     font-family: $font-monserrat;
+
+    >.slick-arrow:not(.stories__read-more) {
+      display: none !important;
+    }
+  }
+
+  &__image-slide {
+    // display: inline-block;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $slider-breakpoint){
+      width: calc(100vw - #{$overlay-width});
+    }
+    
+
+    .stories__read-more {
+      // this media query needs to change to match the slider breakpoint!!!
+       @media (min-width: $slider-breakpoint) {
+        display: none !important;
+      }
+    }
+
+    .stories__image-slide__image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+
+      padding-top: 800px;
+    }
+
+    &.one {
+      .stories__image-slide__image {
+        background-image: url('/images/20-organisms/39-stories/jenniferadoradoorwaycrop.jpg');
+        background-position: 50% 30%;
+      }      
+    }
+
+    &.two {
+      .stories__image-slide__image {
+        background-image: url('/images/20-organisms/39-stories/adora.jpg');
+        background-position: center;
+      }
+    }
+
+    &.three {
+      .stories__image-slide__image {
+        background-image: url('/images/20-organisms/39-stories/jenniferadoracat.jpg');
+        background-position: center;
+      }
+    }
+
+    &.four {
+      .stories__image-slide__image {
+        background-image: url('http://placekitten.com/800/800');
+        background-position: center;
+      }
+    }
+
+    &.five {
+      .stories__image-slide__image {
+        background-image: url('http://placekitten.com/800/800');
+        background-position: center;
+      }
+    }
+
+    &.six {
+      .stories__image-slide__image {
+        background-image: url('/images/20-organisms/39-stories/manuelaandnelsoncrop.jpg');
+        background-position: center;
+      }
+    }
+
+    &.seven {
+      .stories__image-slide__image {
+        background-image: url('http://placekitten.com/800/800');
+        background-position: center;
+      }
+    }
+  }
+
+  &__media-slide {
+    background-color: $color-tomato;
+    @include rem('padding-left', 20px);
+    @include rem('padding-right', 20px);
+    padding-bottom: 5em;
+    padding-top: 3em;
+    position: relative;
+    max-width: 100vw;
+    // width: 100vw;
+
+    @media (min-width: $slider-breakpoint) {
+      // height: 100%;
+      // margin-left: auto;
+      @include rem('padding-bottom', 73px);
+      @include rem('padding-left', 70px);
+      @include rem('padding-right', 70px);
+      // @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 180px));
+      padding-top: 6em;
+      width: calc(100vw - 1px);
+      max-width: calc(100vw - 1px);
+    }
+
+    &__contents {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc((100vh - 6em) / .6);
+    }
+  }
+
+  &__placeholder-slide {
+    display: none !important;
+
+    @media (min-width: $slider-breakpoint){
+      background-color: $color-tomato;
+      display: block !important;
+      height: 100%;
+      width: 1px;
+    }
+  }
+
+  &__slide {
+    background-size: cover;
+    height: 100%;
+    position: relative;
+
+    &.two,
+    &.three,
+    &.seven {
+      .stories__overlay {
+        padding-top: 3em;
+
+        @media (min-width: $slider-breakpoint) {
+          padding-top: 6em;
+        }        
+      }
+    }
   }
 
   &__overlay {
@@ -20,7 +160,7 @@
       margin-left: auto;
       @include rem('padding-bottom', 73px);
       @include rem('padding-left', 70px);
-      @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 224px));
+      @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 180px));
       width: $overlay-width;
     }
   }
@@ -51,6 +191,26 @@
     position: relative;
   }
 
+  &__body-quote {
+    @include rem('font-size', 24px);
+    line-height: 1.25;
+    padding-bottom: 1.5em;
+    position: relative;
+
+    &::before {
+      color: rgba(#fefefe, .25);
+      content: '\201C';
+      // content: '\f10d';
+      // font-family: $font-fontawesome;
+      // font-weight: 400;
+      @include rem('font-size', 140px);
+      @include rem('left', -50px);
+      line-height: 1;
+      position: absolute;
+
+    }
+  }
+
   &__body-text {
     text-align: left;
 
@@ -64,5 +224,11 @@
     @include rem('font-size', 36px);
     position: absolute;
     @include rem('right', 12px);
+    transition: all 500ms;
+
+    &:hover {
+      @include rem('font-size', 48px);
+      transition: all 500ms;
+    }
   }
 }

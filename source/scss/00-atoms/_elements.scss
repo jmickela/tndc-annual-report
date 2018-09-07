@@ -50,3 +50,16 @@ h4 {
   color: white;
   line-height: 1.25;
 }
+
+a,
+a:active,
+a:hover,
+a:visited {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(white, .8);
+}

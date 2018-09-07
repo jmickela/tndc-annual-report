@@ -59,18 +59,5 @@
     p {
       @include rem('margin-bottom', 24px);
     }
-
-    a,
-    a:active,
-    a:hover,
-    a:visited {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: rgba(white, .8);
-    }
   }
 }
