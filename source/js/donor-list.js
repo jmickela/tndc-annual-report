@@ -1,4 +1,4 @@
-let institutionalDonors = [
+const institutionalDonors = [
   { "name": "Good Ventures", "amount": 100000 },
   { "name": "Mimi and Peter Haas Fund", "amount": 100000 },
   { "name": "NeighborWorks America", "amount": 100000 },
@@ -106,10 +106,123 @@ let institutionalDonors = [
   { "name": "U.S. Trust Company, N.A.", "amount": 2500},
   { "name": "UC Hastings College of the Law", "amount": 2500},
   { "name": "Umpqua Bank", "amount": 2500},
-  { "name": "Wall and Ceiling Alliance (WACA)", "amount": 2500}
+  { "name": "Wall and Ceiling Alliance (WACA)", "amount": 2500},
+
+  { "name": "Alcatraz Cruises", "amount": 1000 },
+  { "name": "ASF Electric", "amount": 1000 },
+  { "name": "BAR Architects", "amount": 1000 },
+  { "name": "BBI Construction", "amount": 1000 },
+  { "name": "Caufield Family Foundation", "amount": 1000 },
+  { "name": "Cornell Hotel de France", "amount": 1000 },
+  { "name": "Curtis Development, LLC", "amount": 1000 },
+  { "name": "Devine Property", "amount": 1000 },
+  { "name": "Dolmen Property Group", "amount": 1000 },
+  { "name": "Farella Braun & Martel", "amount": 1000 },
+  { "name": "Ferber Law", "amount": 1000 },
+  { "name": "Fitness SF", "amount": 1000 },
+  { "name": "Glassdoor", "amount": 1000 },
+  { "name": "Grandfund, LLC.", "amount": 1000 },
+  { "name": "Group I", "amount": 1000 },
+  { "name": "Gubb & Barshay LLP", "amount": 1000 },
+  { "name": "Hirschfeld Kraemer, LLP", "amount": 1000 },
+  { "name": "IBEW Local 6", "amount": 1000 },
+  { "name": "Investment Performance Services, LLC.", "amount": 1000 },
+  { "name": "John Stewart Company", "amount": 1000 },
+  { "name": "Langan Treadwell Rollo", "amount": 1000 },
+  { "name": "LPL Financial", "amount": 1000 },
+  { "name": "Martin M. Ron Associates, Inc.", "amount": 1000 },
+  { "name": "Mithun", "amount": 1000 },
+  { "name": "National Equity Fund", "amount": 1000 },
+  { "name": "Northern California Community Loan Fund", "amount": 1000 },
+  { "name": "O'Brien Mechanical, Inc. II", "amount": 1000 },
+  { "name": "Pahl and McCay", "amount": 1000 },
+  { "name": "PSN Family Charitable Trust", "amount": 1000 },
+  { "name": "Recology Golden Gate", "amount": 1000 },
+  { "name": "Reuben, Junius & Rose, LLP", "amount": 1000 },
+  { "name": "RM Low Foundation", "amount": 1000 },
+  { "name": "Skidmore, Owings & Merrill, LLP", "amount": 1000 },
+  { "name": "Studio Vara, Inc.", "amount": 1000 },
+  { "name": "Susie Tompkins Buell Foundation", "amount": 1000 },
+  { "name": "The Herbst Foundation, Inc.", "amount": 1000 },
+  { "name": "The San Francisco Foundation", "amount": 1000 },
+  { "name": "The Trust for Public Land", "amount": 1000 },
+  { "name": "The Zillow Group", "amount": 1000 },
+  { "name": "Valla Family Foundation Trust", "amount": 1000 },
+  { "name": "Vocera Corporate Fund", "amount": 1000 },
+  { "name": "Webcor Builders", "amount": 1000 },
+  { "name": "Wedge Capital Management", "amount": 1000 },
+  { "name": "Wetherby Asset Management", "amount": 1000 },
+  { "name": "Zum-O-Zar Fund", "amount": 1000 },
+
+  { "name": "Adobe", "amount": 500 },
+  { "name": "AEW Engineering", "amount": 500 },
+  { "name": "AGC of California, INC.", "amount": 500 },
+  { "name": "Allied Framers, Inc.", "amount": 500 },
+  { "name": "Barcelon Jang Architecture", "amount": 500 },
+  { "name": "Caritas Management Corporation", "amount": 500 },
+  { "name": "Commercial Energy of California", "amount": 500 },
+  { "name": "Emerald Fund", "amount": 500 },
+  { "name": "Employers' Advocate, INC.", "amount": 500 },
+  { "name": "Evans Brothers, Inc.", "amount": 500 },
+  { "name": "Gamco Investors, INC.", "amount": 500 },
+  { "name": "Golden Gate Van Ness LLC", "amount": 500 },
+  { "name": "Guzman Construction Group, Inc.", "amount": 500 },
+  { "name": "Hamilton Lane Advisors, LLC", "amount": 500 },
+  { "name": "Hardison, Komatsu, Ivelich & Tucker", "amount": 500 },
+  { "name": "Hathaway-Dinwiddie Construction Group", "amount": 500 },
+  { "name": "IDA Structural Engineers, Inc.", "amount": 500 },
+  { "name": "Ironwood Commerican Builders, Inc.", "amount": 500 },
+  { "name": "John W. Hancock Foundation", "amount": 500 },
+  { "name": "Kraw Law Group, APC.", "amount": 500 },
+  { "name": "Lindquist, LLP.", "amount": 500 },
+  { "name": "Local Initiatives Support Corp.", "amount": 500 },
+  { "name": "Marina Pest Control", "amount": 500 },
+  { "name": "Moscone Emblidge & Otis", "amount": 500 },
+  { "name": "NerdWallet", "amount": 500 },
+  { "name": "Overaa Construction", "amount": 500 },
+  { "name": "Pyatok Architects", "amount": 500 },
+  { "name": "Sun Light & Power", "amount": 500 },
+  { "name": "Tennebaum-Manheim Engineers", "amount": 500 },
+  { "name": "The Art Institutes International II LLC", "amount": 500 },
+  { "name": "Theatrical Stage Employees Union Local No. 16", "amount": 500 },
+  { "name": "Unsworth Personnel", "amount": 500 },
+  { "name": "Van Meter Williams Pollack LLP", "amount": 500 },
+  { "name": "Vlaming and Associates", "amount": 500 },
+  { "name": "Weinberg, Roger & Rosenfeld", "amount": 500 },
+
+  { "name": "AEGON USA Realty Advisors", "amount": 250 },
+  { "name": "Alternative Technologies", "amount": 250 },
+  { "name": "Bay City Mechanical, Inc.", "amount": 250 },
+  { "name": "Foundry Partners, LLP.", "amount": 250 },
+  { "name": "Goldman Sachs Philanthropy Fund", "amount": 250 },
+  { "name": "Indiana, Illinois, Iowa Foundation For Fair Contracting", "amount": 250 },
+  { "name": "J.B. Katz Charitable Fund", "amount": 250 },
+  { "name": "Kapor Enterprises, Inc.", "amount": 250 },
+  { "name": "OLMM Consulting Engineers", "amount": 250 },
+  { "name": "Richard Hancock Inc.", "amount": 250 },
+  { "name": "Saylor Consulting Group", "amount": 250 },
+  { "name": "The Design Studios Gonzalo Castro", "amount": 250 },
+  { "name": "Washington Capital Management, Inc.", "amount": 250 },
+  { "name": "Wright Contracting, INC.", "amount": 250 },
+
+  { "name": "AmazonSmile Foundation", "amount": 100 },
+  { "name": "Botto Law Group", "amount": 100 },
+  { "name": "Curry Senior Center", "amount": 100 },
+  { "name": "Dolby Match Program", "amount": 100 },
+  { "name": "Irving Antonio Gonzales Architects", "amount": 100 },
+  { "name": "Mission Housing Development Corp.", "amount": 100 },
+  { "name": "Office of Rep. Nancy Pelosi", "amount": 100 },
+  { "name": "Okamoto Saijo Architecture", "amount": 100 },
+  { "name": "The Hall", "amount": 100 },
+  { "name": "The Outdoor Art Club", "amount": 100 },
+  { "name": "University High School", "amount": 100 },
+
+  { "name": "Enterprise Realty Partners, LLC", "amount": 1 },
+  { "name": "San Gorgonio Pass F.O.E 3768", "amount": 1 },
+  { "name": "United Way of Central Maryland", "amount": 1 }
 ];
 
-let individualDonors = [
+const individualDonors = [
     { "name": "Anonymous","amount": 55000 },
     { "name": "Frances & Theodore Geballe", "amount": 55000 },
     { "name": "Paul S. May Gift Fund", "amount": 55000 },
@@ -1490,6 +1603,7 @@ let individualDonors = [
 
 $(document).ready(function () {
   updateIndividualColumns();
+  updateInstitutionalColumns();
 
   $(window).on('resize', updateIndividualColumns);
 
@@ -1518,32 +1632,33 @@ $(document).ready(function () {
     updateIndividualColumns(filter);
   });
 
-    $('[name=institutional]').on('change', function() {
-        let val = $(this).val();
-        let filter = {
-            lower: undefined,
-            upper: undefined
-        };
+  $('[name=institutional]').on('change', function() {
+    let val = $(this).val();
+    let filter = {
+        lower: undefined,
+        upper: undefined
+    };
 
-        // When one input has a value selected, make sure the same value is selected in the other.
-        $('[name=individual]').val([val]);
+    // When one input has a value selected, make sure the same value is selected in the other.
+    $('[name=institutional]').val([val]);
 
-        filter.lower = $('[name=institutional]:checked').attr('data-lower');
-        filter.upper = $('[name=institutional]:checked').attr('data-upper');
+    filter.lower = $('[name=institutional]:checked').attr('data-lower');
+    filter.upper = $('[name=institutional]:checked').attr('data-upper');
 
-        updateInstitutionalColumns(filter);
-    });
+    updateInstitutionalColumns(filter);
+  });
 });
 
 
 
 function updateIndividualColumns(filterVals = {lower: undefined, upper: undefined, text: undefined}) {
-  let itemCount = 20;
+  let itemCount = 13;
+
 
   if (window.innerWidth > 982) {
-    itemCount = 40;
+    itemCount = 32;
   } else if (window.innerWidth > 600) {
-    itemCount = 30;
+    itemCount = 20;
   }
 
   // Copy the data into a new array.
@@ -1594,8 +1709,6 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
 
     // remove the first itemCount items from the array and put them in this column.
     for (let i = 0; i < itemCount && names.length; i++) {
-
-
       let name = names.shift();
       $(container).append("<div>" + name.name + "</div>");
     }
@@ -1610,36 +1723,35 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
 }
 
 function updateInstitutionalColumns(filterVals = { lower: undefined, upper: undefined, text: undefined }) {
-  let itemCount = 20;
+  let itemCount = 13;
+  let needsSlider = false;
 
   if (window.innerWidth > 982) {
-    itemCount = 40;
+    itemCount = 24;
   } else if (window.innerWidth > 600) {
-    itemCount = 30;
+    itemCount = 18;
   }
 
-  let names = individualDonors;
+  let names = institutionalDonors.slice();
 
-  if (filterVals.lower !== undefined) {
+  if (filterVals.lower !== undefined && filterVals.lower !== "") {
     names = names.filter(function (item) {
       return item.amount >= filterVals.lower;
     });
   }
 
-  if (filterVals.upper !== undefined) {
+  if (filterVals.upper !== undefined && filterVals.upper !== "") {
     names = names.filter(function (item) {
       return item.amount <= filterVals.upper;
     });
   }
 
-  if (filterVals.text !== undefined) {
+  if (filterVals.text !== undefined && filterVals.text !== "") {
     names = names.filter(function (item) {
 
       return item.name.includes(filterVals.text);
     });
   }
-
-  
 
   // If the slider is already enabled, destroy it.
   if ($('.donorlist__institution__cols__wrapper').hasClass('flickity-enabled')) {
@@ -1653,21 +1765,37 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   // The upper range is a special case and includes multiple ranges.
   if (filterVals.lower == 10000) {
     let range1 = names.filter(function (item) {
-      return item.amount < 15000;
+      return item.amount >= 100000;
     });
 
     let range2 = names.filter(function (item) {
-      return item.amount > 15000 && item.amount <= 50000;
+      return item.amount >= 50000 && item.amount < 100000;
+    });
+
+    let range3 = names.filter(function (item) {
+      return item.amount >= 20000 && item.amount < 50000;
+    });
+
+    let range4 = names.filter(function (item) {
+      return item.amount >= 10000 && item.amount < 20000;
     });
 
     let ranges = [
       {
-        'title': 'Top Range',
+        'title': '$100,000+',
         'items': range1
       },
       {
-        'title': 'Other range',
-        'items': range1
+        'title': '$50,000 - $99,999',
+        'items': range2
+      },
+      {
+        'title': '$20,000 - $49,999',
+        'items': range3
+      },
+      {
+        'title': '$10,000 - $19,999',
+        'items': range4
       }
     ];
 
@@ -1677,41 +1805,46 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
     ranges.forEach(element => {
       var wrapper = document.createElement('div');
       wrapper.className = 'donorlist__institution__items__wrapper';
-      $(wrapper).append('<h4>' + element.title + '</h4>');
+      $(wrapper).append('<h4 class="donorlist__institution__col__title">' + element.title + '</h4>');
 
       var items = document.createElement('div');
       items.className = 'donorlist__institution__items';
 
-      for (let i = 0; i < element.items.length; i++) {
+      while (element.items.length !== 0) {
         var name = element.items.shift();
-        $(items).append('<div>' + name + '</div>');
+        $(items).append('<div>' + name.name + '</div>');
       }
       $(wrapper).append(items);
       $(container).append(wrapper);
       
     });
-    $('donorlist__institution__cols__wrapper').append(container);
+    $('.donorlist__institution__cols__wrapper').append(container);
 
   } else {
     // Break array into max num chunks
 
+    if(names.length > itemCount)
+      needsSlider = true;
 
-    for (var j = 0; j < names.length / 10; j++) {
+
+    for (var j = 0; j <= Math.ceil(names.length / itemCount); j++) {
       var container = document.createElement('div');
       container.className = "donorlist__institution__col";
 
       $('.donorlist__institution__cols__wrapper').append(container);
 
       for (var i = 0; i < itemCount && names.length; i++) {
-        var name = names.pop();
+        var name = names.shift();
         $(container).append("<div>" + name.name + "</div>");
       }
     }
 
-    $('.donorlist__institution__cols__wrapper').flickity({
-      cellAlign: 'left',
-      contain: true,
-    });
+    if(needsSlider) {
+      $('.donorlist__institution__cols__wrapper').flickity({
+        cellAlign: 'left',
+        contain: true,
+      });
+    }
   }
 
 
