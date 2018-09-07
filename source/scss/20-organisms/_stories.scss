@@ -64,14 +64,7 @@
 
     &.four {
       .stories__image-slide__image {
-        background-image: url('http://placekitten.com/800/800');
-        background-position: center;
-      }
-    }
-
-    &.five {
-      .stories__image-slide__image {
-        background-image: url('http://placekitten.com/800/800');
+        background-image: url('/images/20-organisms/39-stories/debora_cropped.jpg');
         background-position: center;
       }
     }
@@ -85,14 +78,14 @@
 
     &.seven {
       .stories__image-slide__image {
-        background-image: url('http://placekitten.com/800/800');
+        background-image: url('/images/20-organisms/39-stories/cooking.png');
         background-position: center;
       }
     }
   }
 
   &__media-slide {
-    background-color: $color-tomato;
+    background-color: rgba($color-tomato,.8);
     @include rem('padding-left', 20px);
     @include rem('padding-right', 20px);
     padding-bottom: 5em;
@@ -125,7 +118,7 @@
     display: none !important;
 
     @media (min-width: $slider-breakpoint){
-      background-color: $color-tomato;
+      background-color: rgba($color-tomato,.8);
       display: block !important;
       height: 100%;
       width: 1px;
