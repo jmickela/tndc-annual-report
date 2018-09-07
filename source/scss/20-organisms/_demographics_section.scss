@@ -12,6 +12,8 @@
 }
 
 .demographics__graph__wrapper {
+  @include rem('margin-bottom', 30px);
+
   border-bottom: 4px solid #323232;
   display: flex;
   flex-direction: row;
