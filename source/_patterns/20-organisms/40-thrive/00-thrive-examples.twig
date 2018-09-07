@@ -7,22 +7,47 @@
       <div class="thrive__statistic-description first">
         Majority of our residents live on <br /><span class="thrive__statistic-number">$15,000 a year or $1,300 a month</span>
       </div>
-      {% include "10-molecules/40-icon-with-text/01-icon-with-text.twig" with {
-        icon_class: "thrive__bar-graph",
-        icons: [
-          '/images/20-organisms/40-thrive/Bar_Graph.svg',
-          '/images/20-organisms/40-thrive/Bar_Graph_Overlay_Text.svg'
-        ],
-        text_class: "thrive__bar-graph-disclaimer",
-        text_content: "*Incomes are based on a one-person household according to the Mayor’s Office of Housing and Community Development"
-      } %}
-      {# <!--<div class="thrive__bar-graph">
-        <img src='/images/20-organisms/40-thrive/Bar_Graph.svg' />
-        <img src='/images/20-organisms/40-thrive/Bar_Graph_Overlay_Text.svg' />
+
+      <div class="demographics__graph__wrapper not-visible" data-scroll>
+
+        <div class="demographics__graph__barchart demographics__graph__barchart--one">
+          <div class="demographics__graph__label">
+            <div class="bold">2.4%</div>
+            <div>ABOVE MODERATE</div>
+          </div>
+          <div class="demographics__graph__line"></div>
+          <div class="demographics__graph__bar"></div>
+        </div>
+
+        <div class="demographics__graph__barchart demographics__graph__barchart--two">
+          <div class="demographics__graph__label">
+            <div class="bold">5.3%</div>
+            <div>LOW INCOME: up to $64,550</div>
+          </div>
+          <div class="demographics__graph__line"></div>
+          <div class="demographics__graph__bar"></div>
+        </div>
+
+        <div class="demographics__graph__barchart demographics__graph__barchart--three">
+          <div class="demographics__graph__label">
+            <div class="bold">8.3%</div>
+            <div>VERY LOW INCOME: up to $40,350</div>
+          </div>
+          <div class="demographics__graph__line"></div>
+          <div class="demographics__graph__bar"></div>
+        </div>
+
+        <div class="demographics__graph__barchart demographics__graph__barchart--four">
+          <div class="demographics__graph__label">
+            <div class="bold">84%</div>
+            <div>EXTREMELY LOW INCOME: up to $24,200</div>
+          </div>
+          <div class="demographics__graph__bar"></div>
+        </div>
+
+
       </div>
-      <div class="thrive__bar-graph-disclaimer">
-        *Incomes are based on a one-person household according to the Mayor’s Office of Housing and Community Development
-      </div> --> #}
+
       <div class="thrive__people-graph ">
         <img src='/images/20-organisms/40-thrive/People.svg' />
       </div>
