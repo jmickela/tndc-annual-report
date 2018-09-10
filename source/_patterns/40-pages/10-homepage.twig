@@ -1,4 +1,11 @@
-{% include '/20-organisms/10-header/20-hero-behind-menu.twig' %}
+{% include '/20-organisms/10-header/20-hero-behind-menu.twig' with 
+  { "headerImages": {
+      "small": "/images/20-organisms/20-hero/cover_hands-on-quilt.jpg",
+      "medium": "/images/20-organisms/20-hero/cover_hands-on-quilt.jpg",
+      "large": "/images/20-organisms/20-hero/cover_hands-on-quilt.jpg"
+    }
+  }
+%}
 
 {% include '/20-organisms/38-sanfrancisco/00-sanfrancisco-examples.twig' %}
 
