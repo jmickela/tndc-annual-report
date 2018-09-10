@@ -148,12 +148,17 @@
     @include rem('padding', 0 20px 30px);
     width: 100%;
 
+    position: relative;
+
     @media (min-width: $overlay-width) {
       height: 100%;
       margin-left: auto;
       @include rem('padding-bottom', 73px);
       @include rem('padding-left', 70px);
       @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 180px));
+    }
+
+    @media (min-width: $slider-breakpoint) {
       width: $overlay-width;
     }
   }
@@ -180,7 +185,7 @@
     @include rem('font-size', 16px);
     @include rem('letter-spacing', .17px);
     line-height: 1.5;
-    @include rem('padding-bottom', 35px);
+    // @include rem('padding-bottom', 35px);
     position: relative;
   }
 
@@ -207,8 +212,21 @@
   &__body-text {
     text-align: left;
 
+    a {
+      @include rem('font-size', 17px);
+      @include rem('letter-spacing', .5px);
+    }
+    
     p {
       @include rem('margin-bottom', 24px);
+    }
+  }
+
+  &__house-icon {
+    @include rem('padding-top', 42px);
+
+    img {
+      max-height: 85px;
     }
   }
 
@@ -216,12 +234,17 @@
     @include rem('bottom', 11px);
     @include rem('font-size', 36px);
     position: absolute;
-    @include rem('right', 12px);
+    @include rem('right', 20px);
+    text-align: right;
     transition: all 500ms;
 
     &:hover {
-      @include rem('font-size', 48px);
+      @include rem('font-size', 42px);
       transition: all 500ms;
+    }
+
+    @media (min-width: $overlay-width) {
+      @include poly-fluid-sizing('right', (780px: 70px, 1440px: 180px));
     }
   }
 }
