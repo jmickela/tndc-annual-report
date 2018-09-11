@@ -1,20 +1,23 @@
 <div class="site-footer">
   <div class="footer-contents">
     <div class="row">
-      <div class="col-md-6 footer-left">
+      <div class="col-sm-5 col-xs-12 footer-left">
         <div class="footer-logo">
-          <img src="http://placekitten.com/190/80" alt="Site Footer Logo">
+          <img src="/images/20-organisms/30-footer/TNDC_logo-White.svg" alt="Site Footer Logo">
         </div>
         {% embed "00-atoms/01-text/08-address" with 
-          {'address': '
-            Address'} %}
+          {'address': '201 Eddy Street
+          San Francisco CA 94102'
+          } %}
         {% endembed %}
         {% embed "00-atoms/01-text/09-contact-info" with 
-          {'contact_info': '
-            Contact Information'} %}
+          {'contact_info': 'phone: 415-776-2151 <br>
+            <a href="http://tndc.org">tndc.org</a>'     
+          }
+        %}
         {% endembed %}
       </div>
-      <div class="col-md-6 footer-right">
+      <div class="col-sm-7 col-xs-12 footer-right">
         <div class="social-media-menu">
             <ul class="social-media-buttons">
             {% embed "10-molecules/15-social-media-buttons/10-social-media-button" with 
@@ -43,7 +46,7 @@
         <div class="footer-copyright">
           {% embed "00-atoms/01-text/07-copyright" with 
           {'copyright': '
-            ©2018 , Tenderloin Neighborhood Development All rights reserved. Sire by Rootid.in'} %}
+            ©2018, Tenderloin Neighborhood Development. All rights reserved. Site by <a href="https://www.rootid.com">Rootid.com</a>'} %}
           {% endembed %}
         </div>
       </div>

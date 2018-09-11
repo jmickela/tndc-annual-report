@@ -23,16 +23,21 @@
   .footer-contact-info {
     @include rem('font-size', 18px);
     @include rem('letter-spacing', .5px);
-    line-height: 1.35
+    line-height: 1.35;
+  }
 
+  .footer-address {
+    
+    white-space: pre-line;
+  }
+
+  .footer-contact-info {
+    
   }
 
   .footer-buttons {
     @include rem('margin-bottom', 2px);
-  }
-
-  .footer-contact-info {
-  }
+  }  
 
   .footer-contents {
     // border: 1px dashed blue;
@@ -55,13 +60,23 @@
   }
 
   .footer-right {
-    text-align: right;
+    margin-top: 2em;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      text-align: right;
+    }
   }
 
   .social-media-menu {
     @include rem('padding-top', 5px);
     .social-media-buttons {
       @include rem('margin-bottom', 2px);
+      padding-left: 0;
+    
+      @media (min-width: 768px) {
+        @include rem('padding-left', 40px);
+      }
     }
   }
 }
