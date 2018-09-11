@@ -1718,6 +1718,7 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
     $('.donorlist__individual__cols__wrapper').flickity({
       cellAlign: 'left',
       contain: true,
+      pageDots: false
     });
   }
 }
@@ -1843,6 +1844,7 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
       $('.donorlist__institution__cols__wrapper').flickity({
         cellAlign: 'left',
         contain: true,
+        pageDots: false
       });
     }
   }
