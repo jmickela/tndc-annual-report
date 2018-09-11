@@ -107,6 +107,12 @@
   }
 }
 
+.donorlist__institution__cols__wrapper .flickity-button,
+.donorlist__individual__cols__wrapper .flickity-button {
+  width: 25px;
+  height: 25px;
+}
+
 .donorsearch__searchform__submit {
   @include rem('padding', 0 14px);
   background-color: #444444;
