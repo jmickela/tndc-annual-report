@@ -137,7 +137,7 @@
         padding-top: 3em;
 
         @media (min-width: $slider-breakpoint) {
-          padding-top: 6em;
+          padding-top: 5em;
         }        
       }
     }
@@ -155,7 +155,8 @@
       margin-left: auto;
       @include rem('padding-bottom', 73px);
       @include rem('padding-left', 70px);
-      @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 180px));
+      @include rem('padding-right', 70px);
+      // @include poly-fluid-sizing('padding-right', (780px: 70px, 1440px: 180px));
     }
 
     @media (min-width: $slider-breakpoint) {
@@ -167,8 +168,14 @@
     margin-bottom: 1em;
     @include org-title;
     // padding-bottom: 1.85em;
-    padding-top: 1.7em;
+    // padding-top: 1.7em;
+    // padding-top: 1.5em;
+    @include rem('padding-top', 20px);
     text-align: left;
+
+    @media (min-width: $slider-breakpoint) {
+      @include rem('padding-top', 50px);
+    }
   }
 
   &__subtitle {
@@ -244,7 +251,8 @@
     }
 
     @media (min-width: $overlay-width) {
-      @include poly-fluid-sizing('right', (780px: 70px, 1440px: 180px));
+      @include rem('right', 70px);
+      // @include poly-fluid-sizing('right', (780px: 70px, 1440px: 180px));
     }
   }
 }
