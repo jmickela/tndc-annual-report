@@ -68,22 +68,22 @@ function setHeights() {
   let movies = document.querySelectorAll('.stories__media-slide');
   let photos = document.querySelectorAll('.stories__image-slide__image');
 
-  console.log('here are the stories: ');
-  console.log(stories);
-  console.log('here are the movies: ');
-  console.log(movies);
-  console.log('here are the photos: ');
-  console.log(photos);
+  // console.log('here are the stories: ');
+  // console.log(stories);
+  // console.log('here are the movies: ');
+  // console.log(movies);
+  // console.log('here are the photos: ');
+  // console.log(photos);
 
   let max = 0;
   for(i = 0; i < stories.length; i++) {
-    console.log('the height of this story is: ');
-    console.log(stories[i].offsetHeight);
+    // console.log('the height of this story is: ');
+    // console.log(stories[i].offsetHeight);
     if (stories[i].offsetHeight > max) {
       max = stories[i].offsetHeight;
     }
   }
-  console.log("the tallest height is: " + max);
+  // console.log("the tallest height is: " + max);
   
   for (i = 0; i < stories.length; i++) {
     stories[i].style.height = max +"px";
