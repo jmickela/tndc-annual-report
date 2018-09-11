@@ -27,12 +27,16 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+
+  flex: 1 1 auto;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .demographics__graph__bar {
   border: 4px solid #323232;
   border-bottom: 0;
-  width: 119px;
+  width: 100%;
 
   transition: height 1600ms ease;
   transition-delay: 200ms;
