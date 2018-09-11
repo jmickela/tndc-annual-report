@@ -1,0 +1,30 @@
+{% embed "10-molecules/25-offcanvas-nav/05-basic.twig" with {
+  menu_items: [
+    {
+      title: __('Importance of Home'),
+      link: '#importance-of-home'
+    },
+    {
+      title: __('Stories'),
+      link: '#stories',
+    },
+    {
+      title: __('Impact & Accomplishments'),
+      link: '#impact-and-accomplishments',
+    },
+    {
+      title: __('Financials'),
+      link: '#financials',
+    },
+    {
+      title: __('Donors'),
+      link: '#donors',
+    }
+  ],
+  menu_modifiers: ['mobile'],
+  site_logo_src: "/images/logo_header.svg",
+  site_logo_alt: __("Tenderloin Neighborhood Development") 
+} %}
+{% block menu_extra_content %}
+  {% endblock %}
+{% endembed %}

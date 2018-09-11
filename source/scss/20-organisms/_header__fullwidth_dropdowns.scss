@@ -9,3 +9,31 @@
   }
 
 }
+
+
+.herobehindmenu {
+  .navbar-toggle {
+    border: 1px solid gray;
+    display: block;
+    margin: 0;
+    position: absolute;
+    @include rem('right', 20px);
+    @include rem('top', 20px);
+    z-index: 5;
+  
+    @media (min-width: 992px) {
+      display: none;
+    }
+  
+    &:hover {
+      background-color: rgba(240,240,240,.3);
+      .icon-bar {
+        background-color: rgb(50, 50, 50);
+      }
+    }
+
+    .icon-bar {
+      background-color: rgb(100, 100, 100);
+    }
+  }
+} 

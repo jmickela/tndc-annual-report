@@ -1,0 +1,16 @@
+.navmenu-offcanvas {
+  background-color: black;
+  display: none;
+
+  &.in.canvas-slid {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+}
