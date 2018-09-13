@@ -47,30 +47,10 @@ $(document).ready(function(){
     },
   };
 
-  let inView = false;
-
-  function isScrolledIntoView(elem)
-  {
-    let docViewTop = $(window).scrollTop();
-    let docViewBottom = docViewTop + $(window).height();
-
-    let elemTop = $(elem).offset().top;
-    let elemBottom = elemTop + $(elem).height();
-
-    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+  function newChart(selector, data) {
+    new Chart(selector, data);
   }
 
-  $(window).scroll(function() {
-    if (isScrolledIntoView('#revenueChart')) {
-      if (inView) { return; }
-      inView = true;
-      new Chart(document.getElementById("revenueChart"), revenueChartData);
-    } else {
-      inView = false;  
-    }
-  });
+  checkVisibility('#revenueChart', [newChart, $('#revenueChart'), revenueChartData]);
 
 });
-
-
-
