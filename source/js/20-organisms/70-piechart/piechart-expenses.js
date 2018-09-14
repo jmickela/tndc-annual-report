@@ -55,7 +55,13 @@ $(document).ready(function(){
     function newChart(selector, data) {
       new Chart(selector, data);
     }
+
+    checkVisibility('#expensesChart', {
+      onFirstVisible: [[newChart, $('#expensesChart'), expensesChartData]],
+      // onEveryVisible: [],
+      // onNotVisible: []
+    });
   
-    checkVisibility('#expensesChart', [newChart, $('#expensesChart'), expensesChartData]);
+    // checkVisibility('#expensesChart', [newChart, $('#expensesChart'), expensesChartData]);
 
 });

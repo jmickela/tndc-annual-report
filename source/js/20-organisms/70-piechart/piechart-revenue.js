@@ -51,6 +51,15 @@ $(document).ready(function(){
     new Chart(selector, data);
   }
 
-  checkVisibility('#revenueChart', [newChart, $('#revenueChart'), revenueChartData]);
+
+  checkVisibility('#revenueChart', {
+    onFirstVisible: [[newChart, $('#revenueChart'), revenueChartData]],
+    // onEveryVisible: [],
+    // onNotVisible: []
+  });
+
+  
+
+  // checkVisibility('#revenueChart', [newChart, $('#revenueChart'), revenueChartData]);
 
 });
