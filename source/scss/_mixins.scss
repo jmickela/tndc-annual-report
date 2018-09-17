@@ -261,6 +261,15 @@
   display: flex;
 }
 
+// killing kittens left and right :P
+@mixin flexbox-important() {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
 // The 'flex' shorthand
 // - applies to: flex items
 // <positive-number>, initial, auto, or none
@@ -288,7 +297,7 @@
 @mixin org-title($color: white) {
   font-family: $font-monserrat;
   font-weight: bold;
-  @include poly-fluid-sizing('font-size', (300px: 22px, 1440px: 36px));
+  @include poly-fluid-sizing('font-size', (300px: 20px, 1440px: 36px));
   letter-spacing: .05rem;
   @include rem('letter-spacing', .5px);
   line-height: 1.33;

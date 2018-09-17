@@ -1,20 +1,47 @@
 $(document).ready(function(){
-  $('.stories__container').slick({
+  // $('.stories__container--small').on('init', function(event, slick){
+  //   console.log("initialized")
+  //   setHeights('.stories__container--small');
+  // });
+  $('.stories__container--small').slick({
+    responsive: [
+      {
+        breakpoint: 5000,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          adaptiveHeight: false,
+          autoplay: false,
+          infinite: true,
+          initialSlide: 1,
+          nextArrow: $('.stories__container--small .stories__read-more'),
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
+  $('.stories__container--large').slick({
     adaptiveHeight: false,
     autoplay: false,
     infinite: true,
-    nextArrow: $('.stories__read-more'),
+    nextArrow: $('.stories__container--large .stories__read-more'),
     slidesToShow: 2,
     slidesToScroll: 2,
     variableWidth: true,
     responsive: [
       {
         breakpoint: 992,
-        settings: {
-          variableWidth: false,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+        settings: "unslick",
+        // settings: {
+        //   variableWidth: false,
+        //   slidesToShow: 1,
+        //   slidesToScroll: 1
+        // }
       }
     ]
   });
@@ -63,27 +90,38 @@ $(document).ready(function(){
 
 // $(window).resize(adjustPhotoHeight);
 
-function setHeights() {
-  let stories = document.querySelectorAll('.stories__slide .stories__overlay');
-  let movies = document.querySelectorAll('.stories__media-slide');
-  let photos = document.querySelectorAll('.stories__image-slide__image');
+function setHeights(optionalSelector) {
+  if (typeof optionalSelector === 'undefined') {
+    console.log('the optional selector is not being used');
+    let stories = document.querySelectorAll('.stories__slide .stories__overlay');
+    let movies = document.querySelectorAll('.stories__media-slide');
+    let photos = document.querySelectorAll('.stories__image-slide__image');
+  }
+  else {
+    console.log('the optional selector is being used');
+    let stories = document.querySelectorAll('${optionalSelector} .stories__slide .stories__overlay');
+    let movies = document.querySelectorAll('${optionalSelector} .stories__media-slide');
+    let photos = document.querySelectorAll('${optionalSelector} .stories__image-slide__image');
+  }
+  
 
-  // console.log('here are the stories: ');
-  // console.log(stories);
-  // console.log('here are the movies: ');
-  // console.log(movies);
-  // console.log('here are the photos: ');
-  // console.log(photos);
+  console.log('here are the stories: ');
+  console.log(stories);
+  console.log('here are the movies: ');
+  console.log(movies);
+  console.log('here are the photos: ');
+  console.log(photos);
 
   let max = 0;
   for(i = 0; i < stories.length; i++) {
-    // console.log('the height of this story is: ');
-    // console.log(stories[i].offsetHeight);
+    stories[i].style.height = 'auto';
+    console.log('the height of ' + stories[i].parentElement.classList + ' is: ');
+    console.log(stories[i].offsetHeight);
     if (stories[i].offsetHeight > max) {
       max = stories[i].offsetHeight;
     }
   }
-  // console.log("the tallest height is: " + max);
+  console.log("the tallest height is: " + max);
   
   for (i = 0; i < stories.length; i++) {
     stories[i].style.height = max +"px";
@@ -97,6 +135,10 @@ function setHeights() {
   
 }
 
-$(document).ready(setHeights);
 
-$(window).resize(setHeights);
+// $( window ).on( 'load', setHeights());
+// $( 'iframe#sg-viewport' ).on( "load", setHeights());
+// $( 'iframe#sg-viewport' ).load(setHeights());
+// $(document).ready(setHeights);
+
+// $(window).resize(setHeights);
