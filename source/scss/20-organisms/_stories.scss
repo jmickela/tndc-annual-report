@@ -16,7 +16,7 @@
       // display: none !important;
     }
 
-    .slick-arrow:not(.stories__read-more) {
+    .slick-arrow:not(.stories__nav-link) {
       display: none !important;
     }
 
@@ -107,7 +107,7 @@
     }
     
 
-    .stories__read-more {
+    .stories__nav-link {
       // this media query needs to change to match the slider breakpoint!!!
        @media (min-width: $slider-breakpoint) {
         display: none !important;
@@ -338,22 +338,33 @@
     }
   }
 
-  &__read-more {
+  &__nav-link {
     @include rem('bottom', 11px);
     @include rem('font-size', 36px);
     position: absolute;
-    @include rem('right', 20px);
-    text-align: right;
     transition: all 500ms;
 
     &:hover {
       @include rem('font-size', 42px);
       transition: all 500ms;
     }
+  }
+
+  &__next-link {
+    @include rem('right', 20px);
+    text-align: right;
 
     @media (min-width: $overlay-width) {
       @include rem('right', 70px);
-      // @include poly-fluid-sizing('right', (780px: 70px, 1440px: 180px));
+    }
+  }
+
+  &__prev-link {
+    @include rem('left', 20px);
+    text-align: left;
+
+    @media (min-width: $overlay-width) {
+      @include rem('left', 70px);
     }
   }
 }
