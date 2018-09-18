@@ -5,49 +5,37 @@
         <div class="footer-logo">
           <img src="/images/20-organisms/30-footer/TNDC_logo-White.svg" alt="Site Footer Logo">
         </div>
-        {% embed "00-atoms/01-text/08-address" with 
+        {% include "00-atoms/01-text/08-address" with 
           {'address': '201 Eddy Street
           San Francisco CA 94102'
           } %}
-        {% endembed %}
-        {% embed "00-atoms/01-text/09-contact-info" with 
+        {% include "00-atoms/01-text/09-contact-info" with 
           {'contact_info': 'phone: 415-776-2151 <br>
             <a href="http://tndc.org">tndc.org</a>'     
           }
         %}
-        {% endembed %}
       </div>
       <div class="col-sm-7 col-xs-12 footer-right">
         <div class="social-media-menu">
             <ul class="social-media-buttons">
-            {% embed "10-molecules/15-social-media-buttons/10-social-media-button" with 
+            {% include "10-molecules/15-social-media-buttons/10-social-media-button" with 
               {'social_link': 'https://www.facebook.com/TNDCsf/' } %}
-            {% endembed %}
-            {% embed "10-molecules/15-social-media-buttons/10-social-media-button" with 
+            {% include "10-molecules/15-social-media-buttons/10-social-media-button" with 
               {'social_link': 'https://twitter.com/TNDC' } %}
-            {% endembed %}
-            {% embed "10-molecules/15-social-media-buttons/10-social-media-button" with 
+            {% include "10-molecules/15-social-media-buttons/10-social-media-button" with 
               {'social_link': 'https://www.instagram.com/tndcsf/' } %}
-            {% endembed %}
             </ul>
         </div>
         <div class="footer-buttons">
-          {% embed "10-molecules/10-buttons/10-button" with 
-            {'button_href': '#', 
-              'button_content': 'Sign Up',
-              'button_modifiers': ['black', 'outline'] } %}
-          {% endembed %}
-          {% embed "10-molecules/10-buttons/10-button" with 
+          {% include "10-molecules/10-buttons/10-button" with 
             {'button_href': '#', 
               'button_content': 'Donate',
               'button_modifiers': ['black', 'outline'] } %}
-          {% endembed %}
         </div>
         <div class="footer-copyright">
-          {% embed "00-atoms/01-text/07-copyright" with 
+          {% include "00-atoms/01-text/07-copyright" with 
           {'copyright': '
             ©2018, Tenderloin Neighborhood Development. All rights reserved. Site by <a href="https://www.rootid.com">Rootid.com</a>'} %}
-          {% endembed %}
         </div>
       </div>
     </div
