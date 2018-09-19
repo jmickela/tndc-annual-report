@@ -1607,13 +1607,16 @@ $(document).ready(function () {
 
   $(window).on('resize', updateIndividualColumns);
 
+  $('.donorlist__searchform').on('submit', function() {
+    return false;
+  });
+
   // Handle text search
-  // TODO: currently doesn't work with the dollar ranges.
   $('.donorlist__searchform__input').on('input', function() {
     let filter = $(this).val();
 
     updateIndividualColumns({text: filter});
-    updateIndividualColumns({text: filter });
+    updateInstitutionalColumns({text: filter });
   });
 
   $('[name=individual]').on('change', function() {
@@ -1679,7 +1682,7 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
   if(filterVals.text !== undefined) {
     names = names.filter(function(item) {
 
-      return item.name.includes(filterVals.text);
+      return item.name.toLowerCase().includes(filterVals.text.toLowerCase());
     });
   }
 
@@ -1750,7 +1753,7 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   if (filterVals.text !== undefined && filterVals.text !== "") {
     names = names.filter(function (item) {
 
-      return item.name.includes(filterVals.text);
+      return item.name.toLowerCase().includes(filterVals.text.toLowerCase());
     });
   }
 
