@@ -1701,7 +1701,7 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
 
 
   // iterate through each column
-  for (let j = 0; j <= names.length / itemCount; j++) {
+  for (let j = 0; j <= Math.ceil(names.length / itemCount); j++) {
 
     // Create a column div
     let container = document.createElement('div');
@@ -1827,7 +1827,7 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   } else {
     // Break array into max num chunks
 
-    if(names.length > itemCount)
+    if(names.length > itemCount * 2)
       needsSlider = true;
 
 
