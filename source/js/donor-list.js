@@ -1607,13 +1607,16 @@ $(document).ready(function () {
 
   $(window).on('resize', updateIndividualColumns);
 
+  $('.donorlist__searchform').on('submit', function() {
+    return false;
+  });
+
   // Handle text search
-  // TODO: currently doesn't work with the dollar ranges.
   $('.donorlist__searchform__input').on('input', function() {
     let filter = $(this).val();
 
     updateIndividualColumns({text: filter});
-    updateIndividualColumns({text: filter });
+    updateInstitutionalColumns({text: filter });
   });
 
   $('[name=individual]').on('change', function() {
@@ -1679,7 +1682,7 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
   if(filterVals.text !== undefined) {
     names = names.filter(function(item) {
 
-      return item.name.includes(filterVals.text);
+      return item.name.toLowerCase().includes(filterVals.text.toLowerCase());
     });
   }
 
@@ -1698,7 +1701,7 @@ function updateIndividualColumns(filterVals = {lower: undefined, upper: undefine
 
 
   // iterate through each column
-  for (let j = 0; j <= names.length / itemCount; j++) {
+  for (let j = 0; j <= Math.ceil(names.length / itemCount); j++) {
 
     // Create a column div
     let container = document.createElement('div');
@@ -1750,7 +1753,7 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   if (filterVals.text !== undefined && filterVals.text !== "") {
     names = names.filter(function (item) {
 
-      return item.name.includes(filterVals.text);
+      return item.name.toLowerCase().includes(filterVals.text.toLowerCase());
     });
   }
 
@@ -1824,7 +1827,7 @@ function updateInstitutionalColumns(filterVals = { lower: undefined, upper: unde
   } else {
     // Break array into max num chunks
 
-    if(names.length > itemCount)
+    if(names.length > itemCount * 2)
       needsSlider = true;
 
 
